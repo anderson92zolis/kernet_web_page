@@ -7,10 +7,24 @@ padding: 0;
 box-sizing: border-box; /*que va a contart del border hacia dentro*/
 font-family: Roboto, Arial, Helvetica, sans-serif; /* si no encuentra Roboto tomará helvetica */ }
 
+/* aplicar una seudo class (variable) en css */
+:root  {
+    --color-back-1: bisque
+    --width-content: 1200px;
+}
+
 /* Body */
 body {
     background-image: url(../img/background.png);
+    background-size: cover;
 }
+
+/* para que ocupe  la achura descrita abajo max-width vs width*/
+.width-content {
+    max-width: var(--width-content);
+    margin: 0 auto;
+}
+
 
 
 /* HEADER */
@@ -34,15 +48,27 @@ header > img {
 h1  {
     display: none;
 }
+h2 {
+    font-family: Amita, serif;
+    text-align: center;
+    font-size: 2.5rem;
+    position: relative;
+    top: 60px;
+}
+
+nav {position: sticky;
+top: 0;
+background-color: var(--color-back-1);
+z-index: 2;}
 
 .nav-ul {
     display: flex;
     justify-content: space-around;
     border-bottom:  4px solid black;
-    padding: 10px 0 10px 0;
+    padding: 10px;
 }
 
-nav {}
+
 
 .nav-ul > li  {
    list-style: none;  
@@ -50,13 +76,20 @@ nav {}
 }
 
 
+
+.nav-ul > li:hover {
+    color: white;
+    background-color: rgb(117, 76, 26);
+    border-radius: 10px;
+} 
+.nav-ul > li > a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.5rem;
+}
+
 /* FOOTER */
 
-/* para que ocupe  la achura descrita abajo max-width vs width*/
-.width-content {
-    max-width: 1200px;
-    margin: 0 auto 0 auto;
-}
 
 
 
@@ -76,11 +109,7 @@ footer {
 
 }
 
-/* aplicar una seudo class (variable) en css */
-:root  {
-    --color-back-1: bisque
-    --width-content: 1000px;
-}
+
 
 /* aplicar el css style al hijo directo */
 .footer-div > p {
