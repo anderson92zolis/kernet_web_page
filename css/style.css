@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/*se hace esta configuración siempre al inicio de nuestro css*/
+* {margin: 0;
+padding: 0;
+box-sizing: border-box; /*que va a contart del border hacia dentro*/
+font-family: Roboto, Arial, Helvetica, sans-serif; /* si no encuentra Roboto tomará helvetica */ }
+
+/* Body */
+body {
+    background-image: url(../img/background.png);
+}
+
+
+/* HEADER */
+
+header div {
+    position: absolute;
+    z-index: 2;
+    top: 5% ;
+    left: 8px;
+}
+
+header  div > img {
+ width: 20vw;
+}
+
+header > img {
+    width: 100%;
+}
+
+/*  esconder el título */
+h1  {
+    display: none;
+}
+
+.nav-ul {
+    display: flex;
+    justify-content: space-around;
+    border-bottom:  4px solid black;
+    padding: 10px 0 10px 0;
+}
+
+nav {}
+
+.nav-ul > li  {
+   list-style: none;  
+   padding: 5px;
+}
+
+
+/* FOOTER */
+
+/* para que ocupe  la achura descrita abajo max-width vs width*/
+.width-content {
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
+}
+
+
+
+
+/* información importante para que siempre este en la lista */
+footer {
+    background-color: bisque;
+    position: fixed;
+    bottom: 0;
+    width: 100%;  /* anchura del 100 % */
+}
+
+.footer-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* aplicar una seudo class (variable) en css */
+:root  {
+    --color-back-1: bisque
+    --width-content: 1000px;
+}
+
+/* aplicar el css style al hijo directo */
+.footer-div > p {
+    background-color: var(--color-back-1);
+    font-family: Amita , serif;
+    font-size: 1.5em /* unidad de referencia. y REM depende de las unidades del ROOT  */
+}
+
+.footer-div >img {
+    width: 80px;
+}
+.footer-div >p {
+
+}
